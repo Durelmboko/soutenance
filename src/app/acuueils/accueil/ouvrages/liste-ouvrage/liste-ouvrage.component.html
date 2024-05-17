@@ -1,0 +1,98 @@
+<div class="liste-bg">
+
+      <a  class="btn btn-warning " [routerLink]="['/ouvrage']"> AJOUTER UN LIVRE</a>
+      <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+          <!-- Column -->
+          <div class="col-md-6 col-lg-2">
+            <div class="card card-hover">
+              <div class="box bg-primary text-center">
+                <h1 class="font-light text-white ">
+                  <i class="mdi mdi-view-dashboard"></i>
+                </h1>
+                <h6 class="text-white">Dashboard</h6>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-hover">
+              <div class="box bg-warning text-center">
+                <h1 class="font-light text-white">
+                  <i class="mdi mdi-collage"></i>
+                </h1>
+                <h6 class="text-white">UAHB</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-hover">
+              <div class="box bg-warning text-center">
+                <h1 class="font-light text-white">
+                  <i class="mdi mdi-border-outside"></i>
+                </h1>
+                <h6 class="text-white">UNIVERSITE</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-hover">
+              <div class="box bg-primary text-center">
+                <h1 class="font-light text-white">
+                  <i class="mdi mdi-border-outside"></i>
+                </h1>
+                <h6 class="text-white">BIBLIOTHEQUE</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="container mt-3 ">
+        <div class="card">
+            <div class="card-header  text-white" >
+                LISTE DES OUVRAGES
+            </div>
+            <input type="text" class="form-control mb-2" placeholder="Rechercher..." [(ngModel)]="searchText" (input)="filterOuvrages()" />
+            <div class="card-body">
+      <table class="table table-striped bg-warning">
+        <thead>
+          <tr>
+            <th class="font-size-lg">ID_OUVRAGE</th>
+            <th class="font-size-lg">THEME</th>
+            <th class="font-size-lg">ID_AUTEUR</th>
+            <th class="font-size-lg">TITRE</th>
+            <th class="font-size-lg">TYPE_OUVRAGE</th>
+            <th class="font-size-lg">ISBN</th>
+            <th class="font-size-lg">NB_PAGE</th>
+            <th class="font-size-lg">NB_EXEMP</th>
+            <th class="font-size-lg">ID_FOURNISSEUR</th>
+            <th class="font-size-lg">ID_RAYON</th>
+            <th class="font-size-lg">ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let un_ouvrage of filterOuvrages()">
+            <td class="font-size-md">{{un_ouvrage.id_ouvrage}}</td>
+            <td class="font-size-md bg-primary">{{un_ouvrage.nommer}}</td>
+            <td class="font-size-md bg-primary">{{un_ouvrage.id_auteur +" "+ un_ouvrage.Nom}}</td>
+            <td class="font-size-md bg-primary">{{un_ouvrage.Titre}}</td>
+            <td class="font-size-md bg-white">{{un_ouvrage.id_type +" "+ un_ouvrage.libelle}}</td>
+            <td class="font-size-md bg-white">{{un_ouvrage.isbn}}</td>
+            <td class="font-size-md bg-white">{{un_ouvrage.Nb_page}}</td>
+            <td class="font-size-md bg-primary">{{un_ouvrage.Nb_exemp}}</td>
+            <td class="font-size-md bg-primary">{{un_ouvrage.id_fourni +" "+ un_ouvrage.nom}}</td>
+            <td class="font-size-md bg-primary">{{un_ouvrage.id_rayon +" "+ un_ouvrage.code}}</td>  
+            <td>
+              <a class="btn btn-primary" [routerLink]="['/emprunt',un_ouvrage.id_ouvrage]">EMPRUNTER</a>
+              <button class="btn btn-danger" (click)="deleteOuvrage(un_ouvrage.id_ouvrage)">SUPPRIMER</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+      
+            
+            </div>

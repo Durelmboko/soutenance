@@ -1,0 +1,87 @@
+<div class="emprunt-bg">
+   
+    <div class="container mt-3 center-container"> 
+        <div class="card">
+            <div class="card">
+                <div class="card-header  text-white">
+                    CREATION DES MEMOIRES
+                </div>
+                <div class="card-body">
+                    <form action=""> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                        <label for="">RAYON:</label>
+                        <select name="id_depart" [(ngModel)]="new_memoire.id_depart" 
+                            class="form-control">
+                            <option *ngFor="let un_departement of les_departements " [value]="un_departement.id_depart" style="background-color: lightblue;">
+                                {{un_departement.nom_depart}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">FILIERE:</label>
+                        <select name="codef" [(ngModel)]="new_memoire.codef" 
+                            class="form-control">
+                            <option *ngFor="let une_filiere of les_filieres " [value]="une_filiere.codef" style="background-color: lightblue;">
+                                {{une_filiere.nom}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+           
+                          
+                 <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">TITRE:</label>
+                        <input type="text" name="Titre"  [(ngModel)]="new_memoire.Titre"  class="form-control"  style="background-color: lightblue;">
+                    </div>
+                </div>
+            
+            <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">NOM ETUDIANT:</label>
+                        <input type="text" name="Nom"  [(ngModel)]="new_memoire.Nom"  id="" class="form-control"  style="background-color: lightblue;">
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Nb_PAGE</label>
+                        <input type="number" name="Nb_page" [(ngModel)]="new_memoire.Nb_page"  required autofocus class="form-control" style="background-color: lightgray;"  >
+                    </div>
+                </div>
+                   
+                
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">DATE SOUTENANCE</label>
+                        <input type="date" name="date_sout" [(ngModel)]="new_memoire.date_sout" required autofocus class="form-control" style="background-color: lightgray;">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="">ETAGERE</label>
+                      <input type="number" name="etagere" [(ngModel)]="new_memoire.etagere" required autofocus class="form-control" style="background-color: lightblue;" >
+                  </div>
+              </div>
+                
+               
+                    <p></p>
+                    <div class="">
+                        <button type="button" class="btn btn-success" (click)="envoyer()"> ENVOYER</button>
+                        <a  class="btn btn-primary " [routerLink]="['/liste-memoire']"> LISTE OUVRAGES</a>
+                        
+                        
+                        
+                </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    </div>

@@ -1,0 +1,100 @@
+
+<div class="ouvrage-bg">
+<div class="container mt-3 center-container"> 
+    <div class="card">
+     <div class="card">
+            <div class="card-header  text-white">
+                GESTION D'OUVRAGE
+            </div>
+            <div class="card-body">
+                <form action=""> 
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="">THEME:</label>
+                    <select name="id_theme" [(ngModel)]="new_ouvrage.id_theme" 
+                        class="form-control">
+                        <option *ngFor="let un_theme of les_themes " [value]="un_theme.id_theme" style="background-color: lightblue;">
+                            {{un_theme.nommer}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="">AUTEUR:</label>
+                        <select name="id_auteur" [(ngModel)]="new_ouvrage.id_auteur" required autofocus class="form-control" style="background-color: lightgray;">
+                          <option *ngFor="let un_auteur of les_auteurs" [value]="un_auteur.id_auteur" style="background-color: lightblue;">
+                            {{un_auteur.Nom}}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">TITRE:</label>
+                      <input type="text" name="Titre" [(ngModel)]="new_ouvrage.Titre" required autofocus class="form-control" style="background-color: lightblue;">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">TYPE OUVRAGE:</label>
+                    <select name="id_type" [(ngModel)]="new_ouvrage.id_type" required autofocus class="form-control" style="background-color: lightblue;">
+                        <option *ngFor="let un_type of les_types_ouvrages" [value]="un_type.id_type" style="background-color: lightblue;">
+                            {{un_type.libelle}}
+                        </option>
+                    </select>
+                </div> 
+            </div>
+        
+        <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">ISBN:</label>
+                    <input type="text" name="isbn" [(ngModel)]="new_ouvrage.isbn" required autofocus id="" class="form-control" style="background-color: lightgray;" >
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">NB de page:</label>
+                    <input type="number" name="Nb_page" [(ngModel)]="new_ouvrage.Nb_page" required autofocus id="" class="form-control" style="background-color: lightgray;">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">NB d'exmplaire:</label>
+                    <input type="number" name="Nb_exemp" [(ngModel)]="new_ouvrage.Nb_exemp" required autofocus id="" class="form-control" style="background-color: lightblue;">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">FOURNISSEUR:</label>
+                    <select name="id_fourni" [(ngModel)]="new_ouvrage.id_fourni" required autofocus 
+                    class="form-control" style="background-color: lightblue;">  
+                        <option *ngFor="let un_fournisseur of les_fournisseurs" [value]="un_fournisseur.id_fourni" style="background-color: lightblue;">
+                            {{un_fournisseur.nom}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+       
+        <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">RAYON:</label>
+                    <select name="id_rayon" [(ngModel)]="new_ouvrage.id_rayon" required autofocus class="form-control" style="background-color: lightgray;">
+                        <option *ngFor="let un_rayon of les_rayons" [value]="un_rayon.id_rayon" style="background-color: lightblue;">
+                            {{un_rayon.code}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+                
+                <p></p>
+                <div class="">
+                    <button type="button" class="btn btn-primary " (click)="envoyer()"> Enregistrer</button>
+                    <a  class="btn btn-success " [routerLink]="['/liste-ouvrage']"> LISTE OUVRAGES</a>
+            </div>
+            </form>
+        </div>
+</div>
+</div>
+</div>
+</div>

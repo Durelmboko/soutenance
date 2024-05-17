@@ -1,0 +1,33 @@
+<div class="fournisseur-bg">
+    <div class="container mt-3 center-container">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header text-white">
+                    GESTION DES FOURNISSEURS
+                </div>
+                <div class="row">
+                    <!-- Colonne de l'image -->
+                    <div class="col-md-6">
+                        <img src="assets/images/ouv.jpeg" alt="Description de l'image" class="img-fluid" style="height: 250px;">
+                    </div>
+                    <!-- Colonne des champs -->
+                    <div class="col-md-6">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="">Nom:</label>
+                                <input type="text" name="nom" [(ngModel)]="new_fournisseur.nom" required autofocus class="form-control" style="background-color: lightgray;">
+                            </div>
+
+                            <p></p>
+                            <div class="">
+                                <button type="button" class="btn btn-primary" (click)="envoyer()"> envoyer</button><br><br>
+                            </div>
+                        </form>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

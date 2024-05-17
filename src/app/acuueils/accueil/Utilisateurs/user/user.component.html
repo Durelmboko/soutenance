@@ -1,0 +1,57 @@
+<div class="user-bg">
+    <div class="container mt-3 center-container">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header text-white">
+                    CREATION DES UTILISATEURS 
+                </div>
+                <div class="row">
+                    <!-- Colonne de l'image -->
+                    <div class="col-md-6">
+                        <img src="assets/images/ouv.jpeg" alt="Description de l'image" class="img-fluid" style="height: 350px;">
+                    </div>
+                    <!-- Colonne des champs -->
+                    <div class="col-md-6">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="">PROFIL:</label>
+                                <select name="id_profil" [(ngModel)]="new_user.id_profil" 
+                                    class="form-control" style="background-color: lightblue;">
+                                    <option *ngFor="let un_profil of les_profils " [value]="un_profil.id">
+                                        {{un_profil.libelle}}
+                                    </option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="">NOM:</label>
+                                <input type="text" name="nom"  [(ngModel)]="new_user.nom"  required autofocus class="form-control"   >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">PRENOM</label>
+                                <input type="text" name="prenom" [(ngModel)]="new_user.prenom"  required autofocus class="form-control" style="background-color: lightblue;" >
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="">LOGIN</label>
+                                <input type="email" name="login" [(ngModel)]="new_user.login" required autofocus class="form-control"  >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">PASSWORD</label>
+                                <input type="password" name="password" [(ngModel)]="new_user.password" required autofocus class="form-control" style="background-color: lightblue;" >
+                            </div>
+
+                            <p></p>
+                            <div class="">
+                                <button type="button" class="btn btn-success" (click)="envoyer()"> ENVOYER</button>
+                                <a  class="btn btn-primary " [routerLink]="['/liste-user']"> LISTE USER</a>   
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

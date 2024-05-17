@@ -1,0 +1,92 @@
+<div class="liste-bg">
+  
+    <a  class="btn btn-warning " [routerLink]="['/ouvrage']"> AJOUTER UN LIVRE</a>
+    <div class="container-fluid">
+      <!-- ============================================================== -->
+      <!-- Start Page Content -->
+      <!-- ============================================================== -->
+      <div class="row">
+        <!-- Column -->
+        <div class="col-md-6 col-lg-2">
+          <div class="card card-hover">
+            <div class="box bg-primary text-center">
+              <h1 class="font-light text-white ">
+                <i class="mdi mdi-view-dashboard"></i>
+              </h1>
+              <h6 class="text-white">Dashboard</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-hover">
+            <div class="box bg-warning text-center">
+              <h1 class="font-light text-white">
+                <i class="mdi mdi-collage"></i>
+              </h1>
+              <h6 class="text-white">UAHB</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-hover">
+            <div class="box bg-primary text-center">
+              <h1 class="font-light text-white">
+                <i class="mdi mdi-border-outside"></i>
+              </h1>
+              <h6 class="text-white">UNIVERSITE</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-hover">
+            <div class="box bg-warning text-center">
+              <h1 class="font-light text-white">
+                <i class="mdi mdi-border-outside"></i>
+              </h1>
+              <h6 class="text-white">BIBLIOTHEQUE</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <div class="container mt-3 ">
+        <div class="card">
+            <div class="card-header  text-white" >
+                LISTE DES MEMOIRES
+            </div>
+            <div class="card-body">
+                <table class="table table-striped bg-warning">
+                  <thead>
+                    <tr>
+                        <th class="">ID_MEMOIRE</th>
+                        <th class="">DEPARTEMENT</th>
+                        <th class="">FILIERE</th>
+                        <th class="">TITRE</th>
+                        <th class="">AUTEUR</th>
+                        <th class="">NB_PAGE</th>
+                        <th class="">DATE SOUTENANCE</th>
+                        <th class="">ETAGERE</th>
+                        <th class="">ACTION</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let un_memoire of les_memoires">
+                        <td>{{un_memoire.id}}</td>
+                        <td class="bg-primary">{{un_memoire.id_depart +" "+ un_memoire.nom_depart}}</td>
+                        <td class="bg-primary">{{un_memoire.codef +" "+ un_memoire.nom}}</td>
+                        <td class="bg-primary">{{un_memoire.Titre}}</td>
+                        <td class="bg-white">{{un_memoire.Nom}}</td>
+                        <td class="bg-white">{{un_memoire.Nb_page}}</td>
+                        <td class="bg-white">{{un_memoire.date_sout}}</td>
+                        <td class="bg-white">{{un_memoire.etagere}}</td>
+                         
+                      <td>
+                        
+                        <a  class="btn btn-primary" [routerLink]="['/reservation',un_memoire.id]">RESERVER</a>
+                        
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>

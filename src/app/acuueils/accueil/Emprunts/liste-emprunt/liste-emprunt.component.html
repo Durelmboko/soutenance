@@ -1,0 +1,47 @@
+<div class="liste_emprunt-bg">
+  
+    
+  <div class="container mt-3 center-container">
+      <div class="card">
+       
+          <div class="card-header  text-white">
+              LISTE DES EMPRUNTS
+          </div>
+          <div class="card-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th class="bg-warning">ID_EMPRUNT</th>
+                    <th class="bg-warning">TITRE_OUVRAGE</th>
+                    <th class="bg-warning">ISBN</th>
+                    <th class="bg-warning">EMPRUNTEUR</th>
+                    <th class="bg-warning">PROFIL</th>
+                    <th class="bg-warning">DATE_EMPRUNT</th>
+                    <th class="bg-warning">DATE_RETOUR</th>
+                    <th class="bg-warning">ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let un_emprunt of les_emprunts">
+                    <td class="bg-white">{{ un_emprunt.id }}</td>
+                    <td class="bg-primary">{{ un_emprunt.Titre }}</td>
+                    <td class="bg-primary">{{ un_emprunt.isbn }}</td>
+                    <td class="bg-white">{{ un_emprunt.Nom }}</td>
+                    <td class="bg-white">{{ un_emprunt.id_adherent +" "+ un_emprunt.nom}}</td>
+                    <td class="bg-primary">{{ un_emprunt.date_emprunt }}</td>
+                    <td class="bg-primary">{{ un_emprunt.date_retour }}</td>
+                    <td>
+                      <button class="btn btn-danger" (click)="deleteEmprunt(un_emprunt.id)">SUPPRIMER</button>
+                      <a  class="btn btn-primary" [routerLink]="['/renouvellement',un_emprunt.id]">renouvellement</a>
+                     
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+            
+                                                    
+                  
+  
+  

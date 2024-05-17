@@ -1,0 +1,36 @@
+<div class="auteur-bg">
+    <div class="container mt-3 -container">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-header  text-white">
+            CREATION DES AUTEURS
+          </div>
+          <div class="row">
+            <!-- Colonne de l'image -->
+            <div class="col-md-6">
+              <img src="assets/images/ouv.jpeg" alt="Description de l'image" class="img-fluid" style="height: 250px;">
+            </div>
+
+            <!-- Colonne des champs -->
+            <div class="col-md-6">
+              <form action="">
+                <div class="form-group">
+                  <label for="nom">Nom:</label>
+                  <input type="text" name="Nom" [(ngModel)]="new_auteur.Nom" required autofocus class="form-control" id="nom" style="background-color: lightgray;">
+                </div>
+  
+                <div class="form-group">
+                  <label for="date_naissance">Date de naissance:</label>
+                  <input type="date" name="date_naissance" [(ngModel)]="new_auteur.date_Naiss" required autofocus class="form-control" id="date_naissance" style="background-color: lightblue;">
+                </div>
+  
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary" (click)="envoyer()">Envoyer</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

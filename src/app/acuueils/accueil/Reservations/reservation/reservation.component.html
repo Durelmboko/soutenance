@@ -1,0 +1,108 @@
+<div class="emprunt-bg">
+    <a  class="btn btn-warning " [routerLink]="['/liste-ouvrage']"> CHANGER DE LIVRE</a>
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+          <!-- Column -->
+          <div class="col-md-6 col-lg-2">
+            <div class="card card-hover">
+              <div class="box bg-primary text-center">
+                <h1 class="font-light text-white ">
+                  <i class="mdi mdi-view-dashboard"></i>
+                </h1>
+                <h6 class="text-white">Dashboard</h6>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-hover">
+              <div class="box bg-warning text-center">
+                <h1 class="font-light text-white">
+                  <i class="mdi mdi-collage"></i>
+                </h1>
+                <h6 class="text-white">UAHB</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-hover">
+              <div class="box bg-warning text-center">
+                <h1 class="font-light text-white">
+                  <i class="mdi mdi-border-outside"></i>
+                </h1>
+                <h6 class="text-white">UNIVERSITE</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-hover">
+              <div class="box bg-primary text-center">
+                <h1 class="font-light text-white">
+                  <i class="mdi mdi-border-outside"></i>
+                </h1>
+                <h6 class="text-white">BIBLIOTHEQUE</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+    <div class="container mt-3 center-container"> 
+        <div class="card">
+            <div class="card">
+                <div class="card-header  text-white">
+                    GESTION DE RESERVATIONS
+                </div>
+            <div class="card-body">
+                <form action="">                
+                        <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">TITRE:</label>
+                        <input type="text" name="Titre"  [(ngModel)]="new_reservation.Titre"  class="form-control" disabled style="background-color: lightblue;">
+                    </div>
+                </div>
+            
+            <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">AUTEUR:</label>
+                        <input type="text" name="auteur"  [(ngModel)]="new_reservation.auteur"  id="" class="form-control" disabled style="background-color: lightblue;">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">ETAGERE</label>
+                        <input type="number" name="etagere"  [(ngModel)]="new_reservation.etagere"  id="" class="form-control" disabled >
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">NOM RESERVERTAIRE</label>
+                        <input type="text" name="Nom" [(ngModel)]="new_reservation.Nom"  required autofocus class="form-control"  >
+                    </div>
+                </div>
+                   
+        
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">EMAIL</label>
+                        <input type="email" name="email" [(ngModel)]="new_reservation.email" required autofocus class="form-control" style="background-color: lightblue;" >
+                    </div>
+                </div>
+                
+               
+                    <p></p>
+                    <div class="">
+                        <button type="button" class="btn btn-warning" (click)="envoyer()"> ENVOYER</button>
+                        <a  class="btn btn-primary " [routerLink]="['/liste-emprunt']"> LISTE EMPRUNT</a>
+                        
+                        
+                </div>
+                </form>
+            </div>
+        
+    </div>
+    </div>
+    </div>

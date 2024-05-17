@@ -1,0 +1,62 @@
+<div class="renouvellement-bg ">
+  
+   
+    <div class="container mt-3 center-container"> 
+        <div class="card">
+            <div class="card">
+                <div class="card-header text-white">
+                    CREATION DES EMPRUNTS
+                </div>
+            <div class="card-body">
+                <form action="">
+                    <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">TITRE:</label>
+                        <input type="text" name="Titre"  [(ngModel)]="new_renouvelement.Titre"  class="form-control" disabled style="background-color: lightblue;">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">ISBN:</label>
+                        <input type="text" name="isbn"  [(ngModel)]="new_renouvelement.isbn"  id="" class="form-control" disabled style="background-color: lightblue;" >
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">NOM EMPRUNTEUR</label>
+                        <input type="text" name="Nom" [(ngModel)]="new_renouvelement.Nom"  required autofocus class="form-control" disabled >
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">PROFIL</label>
+                        <input type="text" name="id_adherent" [(ngModel)]="new_renouvelement.id_adherent"  required autofocus class="form-control" disabled>
+                    </div>
+                </div>
+                    
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">DATE EMPRUNT</label>
+                        <input type="date" name="date_emprunt" [(ngModel)]="new_renouvelement.date_emprunt" required autofocus class="form-control" style="background-color: lightblue;">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">DATE RETOUR</label>
+                        <input type="date" name="date_retour" [(ngModel)]="new_renouvelement.date_retour" required autofocus class="form-control" style="background-color: lightblue;">
+                    </div>
+                </div>
+               
+                    <p></p>
+                    <div class="">
+                        <button type="button" class="btn btn-primary" (click)="envoyer()"> ENVOYER</button>
+                        <a  class="btn btn-warning " [routerLink]="['/liste-emprunt']"> RETOUR</a>
+                        
+                        
+                </div>
+                </form>
+            </div>
+    </div>
+    </div>
+    </div>

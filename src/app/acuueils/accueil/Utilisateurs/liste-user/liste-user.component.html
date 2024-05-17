@@ -1,0 +1,41 @@
+            
+<div class="liste-bg">
+  <a  class="btn btn-warning " [routerLink]="['/user']"> AJOUTER UN UTILISATEUR</a>    
+    <div class="container mt-3 center-container">
+      <div class="card">
+        <div class="card">
+            <div class="card-header text-white" >
+                LISTE DES OUVRAGES
+            </div>
+            <div class="card-body">
+                <table class="table table-striped bg-warning">
+                  <thead>
+                    <tr>
+                        <th class="">ID</th>
+                        <th class="">PROFIL</th>
+                        <th class="">NOM</th>
+                        <th class="">PRENOM</th>
+                        <th class="">LOGIN</th>
+                        <th class="">PASSWORD</th>
+                        <th class="">ACTION</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let un_user of les_users">
+                        <td>{{un_user.id}}</td>
+                        <td class="bg-primary">{{un_user.id_profil +" "+ un_user.libelle}}</td>
+                        <td class="bg-primary">{{un_user.Nom}}</td>
+                        <td class="bg-primary">{{un_user.prenom}}</td>
+                        <td class="bg-white">{{un_user.login}}</td>
+                        <td class="bg-white">{{un_user.password}}</td>
+                
+                      <td>
+                        <a  class="btn btn-primary" [routerLink]="[]">EMPRUNTER</a>
+                        
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            </div>

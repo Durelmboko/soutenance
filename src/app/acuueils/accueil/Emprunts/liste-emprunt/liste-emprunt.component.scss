@@ -1,0 +1,21 @@
+.liste_emprunt-bg {
+    background-image: url("/assets/photo.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  height: 100vh;
+  }
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 150vh; 
+    
+  }
+  .card {
+text-align: center;
+  }
+  .card-header{
+    background-color: darkorange;
+  }
